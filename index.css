@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* background-color: whitesmok; */
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 74.5rem;
+  background-color: whitesmoke;
+  z-index: -10;
+}
+/******** Navigation bar styling begins ********/
+
+.page_wrapper {
+  margin: 0rem 19.4rem;
+  padding: 2.5rem 0;
+}
+
+.page_wrapper nav {
+  align-items: center;
+  display: flex;
+  padding: 1em 0;
+  /* background-color: black; */
+}
+
+.menu {
+  font-size: 1rem;
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.menu li {
+  display: inline;
+  font-size: 1.3em;
+  margin-left: 2.35em;
+  padding: 0.8em 0;
+}
+
+.menu li:last-child {
+  background-color: orangered;
+  border-radius: 2px;
+  border:1px solid transparent;
+  color: white;
+  padding: 0.85em 2.2em;
+  margin-left: 2.75em;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.menu li:last-child:hover{
+    background-color: whitesmoke;
+    color: orangered;
+    border: 1px solid orangered;
+    border-radius: 2px;
+}
+
+.menu li:not(:last-child):hover {
+  border-bottom: 1px solid orangered;
+  color: orangered;
+  cursor: pointer;
+}
+
+/********  Header stylign begins ********/
+
+.page_wrapper .header {
+  font-size: 1rem;
+  display: flex;
+  background-color: whitesmoke;
+  column-gap: 3rem;
+  margin-right: -14rem;
+  z-index: 100;
+}
+
+.header .left {
+  display: flex;
+  flex-basis: 64%;
+  flex-direction: column;
+  margin-top: 11.1em;
+  row-gap: 1.9em;
+  /* background-color: palegoldenrod; */
+}
+
+.left .caption .dash {
+  background-color: orangered;
+  display: inline-block;
+  height: 1px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  width: 22px;
+}
+
+.left .caption {
+  color: orangered;
+  letter-spacing: 1.3px;
+  word-spacing: 1px;
+}
+
+.left .heading {
+  font-size: 4.67em;
+  font-weight: bold;
+}
+
+.left p {
+  max-width: 77%;
+  font-size: 1.305em;
+  /* letter-spacing: 1px; */
+  word-spacing: 5px;
+  /* font-weight: 700; */
+  margin-top: 5px;
+  /* letter-spacing: 1.3px */
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+.left span {
+    position: relative;
+  border-radius: 2px;
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: bold; */
+  letter-spacing: 0.5px;
+  margin-top: 1.8em;
+  width: fit-content;
+  background-color: orangered;
+  padding: 1.2em 2.8em;
+  cursor: pointer;
+}
+
+.left span::before{
+    position: absolute;
+    content: 'Explore';
+    font-size: 1.1em;
+    display: grid;
+    place-content: center;
+    color:orangered;
+    inset:0;
+    background-color: whitesmoke;
+    border:1px solid orangered;
+    border-radius: 2px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms, box-shadow 1000ms;
+    transition-timing-function: ease-in-out;
+}
+
+.left span:hover::before{
+    background-color: whitesmoke;
+    transform: scaleY(1);
+    transform-origin: top;
+    box-shadow:0px 0px 30px 5px orangered;
+}
+
+.header .right {
+  object-fit: fill;
+}
+
+.header .right img {
+  /* float:right; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 1%;
+  transform: scale(1.05);
+}
+
+/******** Blogs section styling begins ********/
+
+.page_wrapper .blogs {
+  position: relative;
+  top: -35px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  /* height:1000px; */
+  padding: 4.8rem 6.3rem;
+  row-gap: 3.5rem;
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.05);
+}
+
+.blogs .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 5px;
+}
+
+.blogs .title span {
+  font-size: 2.9em;
+  font-weight: bolder;
+}
+
+.blogs .title .btn {
+    position: relative;
+  background-color: orangered;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em 2.5em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.blogs .title .btn::before{
+    position: absolute;
+    content:'View All';
+    display: grid;
+    place-content: center;
+    color:orangered;
+    inset:0;
+    background-color: white;
+    transform:scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms;
+    border : 1px solid orangered;
+    border-radius: 2px;
+}
+
+.blogs .title .btn:hover::before{
+    transform:scaleX(1);
+    transform-origin: left;
+}
+
+.blogs .blog {
+  display: flex;
+  align-items: center;
+  /* background-color: orangered; */
+  column-gap: 1em;
+  padding: 0 2em;
+}
+
+.blogs .blog .left {
+  flex: 25%;
+  /* background-color: orchid; */
+  height: 168px;
+}
+
+.blogs .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blogs .blog .middle {
+  flex: 55%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  /* letter-spacing: 1px; */
+  word-spacing: 1px;
+  /* padding: 1.1em 0; */
+  margin-right: 10px;
+}
+
+.blogs .middle .heading {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+.blogs .middle p {
+  font-size: 1.32em;
+  line-height: 21px;
+  color: #7b7b7b;
+}
+
+.blogs .middle .btn {
+    position: relative;
+  align-self: flex-end;
+  background-color: #ff4400;
+  font-size: 1.2em;
+  padding: 1em 3.25em;
+  margin: -1px -5px 0 0;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.blogs .middle .btn::before{
+    position: absolute;
+    content:'View';
+    display: grid;
+    place-content: center;
+    color:orangered;
+    inset:0;
+    border-radius: 3px;
+    border : 1px solid orangered;
+    background-color:white;
+    transform:scale(0);
+    transition:transform 250ms;
+}
+
+.blogs .middle .btn:hover::before{
+    transform:scale(1);
+}
+
+.blogs .blog .right {
+  flex: 20%;
+  /* background-color: orange; */
+}
+
+.blogs .blog .right {
+  /* background-color: orangered; */
+  padding: 6px 0;
+  border-left: 1px solid #cacaca;
+}
+
+.blogs .blog .right .info {
+  font-size: 1.2em;
+  word-spacing: 1px;
+  color: #cacaca;
+  margin: 1.15em 0 1.15em 1.8em;
+}
+
+.blogs :nth-child(5) {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: orangered; */
+  margin-top: 2.6rem;
+  column-gap: 1.7rem;
+}
+
+.blogs :nth-child(5) span {
+  width: 1px;
+  height: 20px;
+  background-color: #cacaca;
+}
+
+.blogs :nth-child(5) .btn {
+  padding: 1em 1.4em;
+  /* margin-left: -20px; */
+  font-size: 1.205em;
+  border: 1px solid orangered;
+  border-radius: 3px;
+  color: orangered;
+  transition: background-color 300ms;
+}
+
+.blogs :nth-child(5) .btn:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+/******** Feeds section styling begins ********/
+
+.page_wrapper .instafeeds {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.4em;
+  margin-top: 61.7rem;
+  font-weight: 500;
+}
+
+.instafeeds .title {
+  text-align: center;
+  font-size: 3.1em;
+}
+
+.instafeeds .feeds {
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 175px;
+  grid-auto-rows: 175px;
+  place-items: center;
+  overflow: hidden;
+}
+
+.feeds .firstcol,
+.feeds .secondcol,
+.feeds .thirdcol,
+.feeds .fourthcol {
+  grid-row: 1/4;
+  overflow: hidden;
+}
+
+.feeds img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.11);
+}
+
+/******** Subscription section styling begins ********/
+
+.page_wrapper .subscription {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10.75rem;
+  row-gap: 2.7rem;
+  /* background-color: orangered; */
+}
+
+.subscription .title {
+  text-align: center;
+  font-size: 2.9em;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.subscription p {
+  color: #9c9c9c;
+  padding: 0 27em;
+  /* background-color: green; */
+  font-size: 1.13em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 18px;
+}
+
+.subscription .subscribe {
+  display: flex;
+  align-items: center;
+  height: 53px;
+  padding: 0 27em;
+  /* background-color: green; */
+}
+
+.subscription .subscribe input[type="email"] {
+  all: unset;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  width: 71.5%;
+  height: 100%;
+  font-size: 1.25em;
+  padding: 0 2em;
+}
+
+.subscription .subscribe input[type="email"]::placeholder {
+  color: #cacaca;
+}
+
+.subscription .subscribe .btn {
+  background-color: orangered;
+  cursor:pointer;
+  border-radius: 3px;
+  width: 28.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  color: white;
+  transition:transform 250ms;
+}
+
+.subscription .subscribe .btn:hover{
+    transform:scale(1.1);
+}
+
+/******** Footer styling begins ********/
+
+.page_wrapper .footer {
+  display: flex;
+  height: 300px;
+  margin-top: 9.6rem;
+  /* background-color: orangered; */
+  /* text-align: center; */
+  /* column-gap:rem; */
+}
+
+.footer .first {
+  flex: 40%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  row-gap: 1.65em;
+  padding: 0em 5em;
+}
+
+.footer .first .title :nth-child(2) {
+  width: 132px;
+  margin-left: 3px;
+}
+
+.footer .first p{
+    margin-top: 1px;
+    width:90%;
+    font-size: 1.25em;
+    line-height:23px;
+    word-spacing: 0.5px;
+    /* color:#cacaca; */
+    color:#afafaf;
+
+}
+
+.footer .first .caption{
+    margin-top:3px;
+    font-size:1.5em;
+}
+
+.footer .first .handles{
+    margin:1px 0 0 2px;
+    display: flex;
+    column-gap: 2.5em;
+}
+
+.footer .handles div{
+    display: grid;
+    place-content: center;
+    width:40px;
+    aspect-ratio: 1/1;
+    /* background-color: orangered; */
+    border-radius: 50%;
+    border: 1px solid orangered;
+}
+
+.footer .handles div:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer .handles img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.footer .second,.footer .third, .footer .fourth {
+  flex: 15%;
+  display:flex;
+  flex-direction: column;
+  padding:1.8em 1.1em;
+  row-gap: 2.4em;
+}
+
+.footer :not(:first-child) :nth-child(1){
+    font-size: 1.4em;
+    word-spacing: 2px;
+    /* padding-top: 2px; */
+}
+
+.footer :not(:first-child) :not(:first-child){
+    font-size: 1.25em;
+    color:#afafaf;
+}
+
+.footer .third {
+  flex: 15%;
+  padding-left:2.4em;
+}
+
+.footer .fourth {
+  flex: 30%;
+  padding-left:9em;
+  row-gap: 1px;
+}
+
+.footer .fourth :nth-child(2){
+    margin-top: -1.1em;
+}
+
+.footer .fourth div{
+    height:50px;
+    width:160px;
+}
+
+.footer .fourth img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.footer .fourth .spotify{
+    width:100px;
+}
