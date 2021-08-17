@@ -1,0 +1,52 @@
+
+/******** Navigation bar styling begins ********/
+
+.page_wrapper {
+    margin: 0rem 19.4rem;
+    padding: 2.5rem 0;
+  }
+  
+  .page_wrapper nav {
+    align-items: center;
+    display: flex;
+    padding: 1em 0;
+  }
+  
+  .menu {
+    font-size: 1rem;
+    list-style-type: none;
+    margin-left: auto;
+  }
+  
+  .menu li {
+    display: inline;
+    font-size: 1.3em;
+    margin-left: 2.35em;
+    padding: 0.8em 0;
+  }
+  
+  .menu li:last-child {
+    background-color: orangered;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    margin-left: 2.75em;
+    padding: 0.85em 2.2em;
+    transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -webkit-transition: background-color 250ms;
+  }
+  
+  .menu li:last-child:hover {
+    background-color: whitesmoke;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    color: orangered;
+  }
+  
+  .menu li:not(:last-child):hover {
+    border-bottom: 1px solid orangered;
+    color: orangered;
+    cursor: pointer;
+  }

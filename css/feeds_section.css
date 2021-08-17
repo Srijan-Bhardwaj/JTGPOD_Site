@@ -1,0 +1,39 @@
+
+/******** Feeds section styling begins ********/
+
+.page_wrapper .instafeeds {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-top: 8.5rem;
+  row-gap: 3.4em;
+}
+
+.instafeeds .title {
+  font-size: 3.1em;
+  text-align: center;
+}
+
+.instafeeds .feeds {
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: 175px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 175px;
+  overflow: hidden;
+  place-items: center;
+}
+
+.feeds .firstcol,
+.feeds .secondcol,
+.feeds .thirdcol,
+.feeds .fourthcol {
+  grid-row: 1/4;
+  overflow: hidden;
+}
+
+.feeds img {
+  height: 100%;
+  transform: scale(1.11);
+  width: 100%;
+}

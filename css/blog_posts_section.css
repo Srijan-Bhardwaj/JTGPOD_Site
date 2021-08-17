@@ -1,0 +1,122 @@
+
+/******** Blog Posts section styling begins ********/
+
+.page_wrapper .posts_container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 0 0;
+  row-gap: 3.5rem;
+}
+
+.posts_container .title {
+  font-size: 2.85em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.posts_container .posts {
+  column-gap: 2.8em;
+  display: flex;
+}
+
+.posts_container .posts .card {
+  border-radius: 3px;
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.3em 0 3.7em 0;
+  row-gap: 0.5em;
+}
+
+.posts_container .card .postHeader {
+  border-left: 3px solid orangered;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.95em;
+  padding-top: 2px;
+  row-gap: 1.1em;
+}
+
+.posts .card .postTitle {
+  color: orangered;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.posts .card .postTitle span {
+  color: #afafaf;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.posts .card .postSubtitle {
+  color: #afafaf;
+  font-size: 1.27em;
+}
+
+.posts_container .card .caption {
+  font-size: 2.1em;
+  font-weight: bolder;
+  line-height: 31px;
+  margin-left: 1.7em;
+  width: 80%;
+  word-spacing: 1px;
+}
+
+.posts_container .card p {
+  color: #9c9c9c;
+  font-size: 1.3em;
+  line-height: 20px;
+  margin: 1.55em 0 0 2.7em;
+  width: 80%;
+  word-spacing: 1.5px;
+}
+
+.posts_container .card .btn {
+  background-color: white;
+  border: 1px solid orangered;
+  border-radius: 4px;
+  color: orangered;
+  cursor: pointer;
+  font-size: 1.22em;
+  margin: 1.55em 0 0 2.6em;
+  padding: 1em 2em;
+  position: relative;
+  width:max-content;
+}
+
+.posts_container .card .btn::before {
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 4px;
+  content: "Read More";
+  display: grid;
+  height:100%;
+  left:-1px;
+  place-content: center;
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 250ms, color 1000ms;
+  top:-1px;
+  width:100%;
+}
+
+.posts_container .card .btn:hover::before {
+  color: white;
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+.posts_container .buttons {
+  column-gap: 2.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.posts_container .buttons div {
+  cursor: pointer;
+}

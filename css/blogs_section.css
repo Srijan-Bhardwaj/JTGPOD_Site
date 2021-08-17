@@ -1,0 +1,185 @@
+/******** Blogs section styling begins ********/
+
+.page_wrapper .blogs {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 4.8rem 6.3rem;
+  row-gap: 3.5rem;
+  top: -35px;
+}
+
+.blogs .title {
+  align-items: center;
+  background-color: inherit;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogs .title span {
+  font-size: 2.9em;
+  font-weight: bolder;
+}
+
+.blogs .title .btn {
+  background-color: orangered;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 1em 2.5em;
+  position: relative;
+}
+
+.blogs .title .btn::before {
+  background-color: white;
+  border: 1px solid orangered;
+  border-radius: 2px;
+  color: orangered;
+  content: "View All";
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+.blogs .title .btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.blogs .blog {
+  align-items: center;
+  column-gap: 1em;
+  display: flex;
+  padding: 0 2em;
+}
+
+.blogs .blog .left {
+  flex: 25%;
+  height: 168px;
+  position: relative;
+}
+
+.blogs .left img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blogs :nth-child(2) .left .newTag {
+  background-color: orangered;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 85%, 0 100%);
+  display: grid;
+  font-size: 0.9em;
+  height: 2.77em;
+  place-content: center;
+  position: absolute;
+  right: 2.1em;
+  top: 0.2em;
+  width: 2.77em;
+}
+
+.blogs .blog .middle {
+  display: flex;
+  flex: 55%;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 10px;
+  row-gap: 1.6rem;
+  word-spacing: 1px;
+}
+
+.blogs .middle .heading {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+.blogs .middle p {
+  color: #7b7b7b;
+  font-size: 1.32em;
+  line-height: 21px;
+}
+
+.blogs .middle .btn {
+  align-self: flex-end;
+  background-color: #ff4400;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: -1px -5px 0 0;
+  padding: 1em 3.25em;
+  position: relative;
+}
+
+.blogs .middle .btn::before {
+  background-color: white;
+  border: 1px solid orangered;
+  border-radius: 3px;
+  color: orangered;
+  content: "View";
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transform: scale(0);
+  transition: transform 250ms;
+}
+
+.blogs .middle .btn:hover::before {
+  transform: scale(1);
+}
+
+.blogs .blog .right {
+  border-left: 1px solid #efefef;
+  flex: 20%;
+  padding: 6px 0;
+}
+
+.blogs .blog .right .info {
+  color: #cacaca;
+  font-size: 1.2em;
+  margin: 1.15em 0 1.15em 1.8em;
+  word-spacing: 1px;
+}
+
+.blogs :nth-child(5) {
+  align-items: center;
+  column-gap: 1.7rem;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  margin-top: 2.6rem;
+}
+
+.blogs :nth-child(5) span {
+  background-color: #cacaca;
+  height: 20px;
+  width: 1px;
+}
+
+.blogs :nth-child(5) .btn {
+  border: 1px solid orangered;
+  border-radius: 3px;
+  color: orangered;
+  font-size: 1.205em;
+  padding: 1em 1.4em;
+  transition: background-color 300ms;
+}
+
+.blogs :nth-child(5) .btn:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
