@@ -46,13 +46,23 @@
   place-content: center;
   position: absolute;
   transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
   transform-origin: left;
+  -moz-transform-origin: left;
+  -webkit-transform-origin: left;
   transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -webkit-transition: transform 300ms;
 }
 
 .blogs .title .btn:hover::before {
   transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
   transform-origin: left;
+  -moz-transform-origin: left;
+  -webkit-transform-origin: left;
 }
 
 .blogs .blog {
@@ -134,11 +144,17 @@
   place-content: center;
   position: absolute;
   transform: scale(0);
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
   transition: transform 250ms;
+  -moz-transition: transform 250ms;
+  -webkit-transition: transform 250ms;
 }
 
 .blogs .middle .btn:hover::before {
   transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
 }
 
 .blogs .blog .right {
@@ -176,6 +192,8 @@
   font-size: 1.205em;
   padding: 1em 1.4em;
   transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -webkit-transition: background-color 300ms;
 }
 
 .blogs :nth-child(5) .btn:hover {
