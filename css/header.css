@@ -64,7 +64,10 @@
   content: "Explore";
   display: grid;
   font-size: 1.1em;
-  inset: 0;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
   place-content: center;
   position: absolute;
   transform: scaleY(0);
